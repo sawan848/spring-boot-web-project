@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+          crossorigin="anonymous">
+    <title>New Employee </title>
+</head>
+<body>
+<div class="container">
+    <h1>User Management System</h1>
+    <hr>
+    <h2>Save User</h2>
+
+    <div class="card">
+        <div class="card-body">
+
+    <form action="#" th:action="@{/saveUser}" th:object="${user}" method="POST">
+        <input type="text" th:field="*{firstName}" placeholder="User First Name" class="form-control mb-4 col-4">
+
+        <input type="text" th:field="*{lastName}" placeholder="User Last Name" class="form-control mb-4 col-4">
+
+        <input type="text" th:field="*{email}" placeholder="User Email" class="form-control mb-4 col-4">
+
+        <button type="submit" class="btn btn-info col-2"> Save User</button>
+    </form>
+
+    <hr>
+
+    <a th:href="@{/}"> Back to Employee List</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
